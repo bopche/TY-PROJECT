@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+            text-decoration: none;
+            font-family: "Gill Sans", sans-serif;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: #212023;
+        }
+
+        header {
+            width: 100%;
+            height: 75px;
+            background: #11101b;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0 130px;
+        }
+
+        .logo {
+            font-size: 28px;
+            color: #ff004f;
+            font-weight: bold;
+        }
+
+        .hamburger {
+            display: none;
+        }
+
+        .nav-bar ul {
+            display: flex;
+        }
+
+        .nav-bar ul li a {
+            display: block;
+            color: #fefefe;
+            font-size: 18px;
+            font-weight: bold;
+            padding: 10px 25px;
+            border-radius: 50px;
+            transition: 0.2s;
+            margin: 0 5px;
+            position: relative;
+        }
+
+        .nav-bar ul li a::after {
+            content: '';
+            width: 0;
+            height: 3px;
+            background: #ff004f;
+            position: absolute;
+            left: 23px;
+            bottom: 3px;
+            transition: 0.4s;
+        }
+
+        .nav-bar ul li a:hover::after {
+            width: 60%;
+        }
+
+        .container {
+            padding: 10px 10%;
+        }
+
+        .sub-title {
+            font-size: 60px;
+            font-weight: 600;
+            color: #fefefe;
+            text-align: center;
+        }
+
+        .work-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            grid-gap: 40px;
+            margin-top: 50px;
+            margin-bottom: 50px;
+        }
+
+        .work {
+            border-radius: 10px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .work img {
+            width: 100%;
+            height: 70vh;
+            border-radius: 10px;
+            display: block;
+            transition: transform 0.5s;
+        }
+
+        .layer {
+            width: 100%;
+            height: 0;
+            background: linear-gradient(rgba(0, 0, 0, 0.6), #9a3833);
+            border-radius: 10px;
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            padding: 0 40px;
+            text-align: center;
+            font-size: 14px;
+            transition: height 0.5s;
+        }
+
+        .layer h1 {
+            font-weight: bold;
+            font-size: 40px;
+            color: #fefefe;
+        }
+        .layer p{
+            font-size: 20px;
+            color: #fefefe;
+            font-style: italic;
+            margin-top: 20px;
+        }
+
+        .layer span {
+            text-decoration: none;
+        }
+
+        .layer span a i {
+            background: #fff;
+            color: #ff004f;
+            height: 60px;
+            width: 60px;
+            padding-top: 20px;
+            margin: 20px 10px;
+            text-align: center;
+            border-radius: 50%;
+            font-size: 18px;
+        }
+
+        .work:hover img {
+            transform: scale(1.1);
+        }
+
+        .work:hover .layer {
+            height: 100%;
+        }
+
+        @media only screen and (max-width: 900px) {
+            header {
+                padding: 0 50px;
+            }
+
+            .hamburger {
+                display: block;
+                cursor: pointer;
+            }
+
+            .hamburger .line {
+                width: 30px;
+                height: 3px;
+                background-color: #fefefe;
+                margin: 6px 0;
+            }
+
+            .nav-bar {
+                height: 0;
+                position: absolute;
+                top: 80px;
+                left: 0;
+                right: 0;
+                width: 100vw;
+                background: #11101b;
+                transition: 0.5s;
+                overflow: hidden;
+            }
+
+            .nav-bar.active {
+                height: 450px;
+                z-index: 10;
+            }
+
+            .nav-bar ul {
+                display: block;
+                width: fit-content;
+                margin: 80px auto 0 auto;
+                text-align: center;
+                transition: 0.5s;
+                opacity: 0;
+            }
+
+            .nav-bar.active ul {
+                opacity: 1;
+            }
+
+            .nav-bar ul li a {
+                margin-bottom: 20px;
+            }
+
+            .sub-title {
+                font-size: 40px;
+                margin: 40px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="logo">Odyssey</div>
+        <div class="hamburger">
+            <div class="line"></div>
+            <div class="line"></div>
+            <div class="line"></div>
+        </div>
+        <nav class="nav-bar">
+            <ul>
+                <li><a href="#" class="active">Home</a></li>
+                <li><a href="#">Top Tools</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Contact</a></li>
+                <li><a href="#">Login</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div id="card-box">
+        <div class="container">
+            <h1 class="sub-title">Top Destinations</h1>
+            <div class="work-list">
+             
+                <a href="">
+                    <div class="work">
+                        <img src="../Images/Beaches.jpeg">
+                        <div class="layer">
+                            <h1>Beaches</h1>
+                            <p>Beaches are coastal areas where land meets the sea, characterized by sandy shores and the rhythmic sound of waves.</p>
+                        </div>
+                    </div>
+                </a>
+                <a href="">
+                    <div class="work">
+                        <img src="../Images/Caves.jpeg">
+                        <div class="layer">
+                            <h1>Caves</h1>
+                            <p>Caves are natural underground spaces, often formed over thousands of years through geological processes.</p>
+                        </div>
+                    </div>
+                </a>
+                <a href="">
+                    <div class="work">
+                        <img src="../Images/Forts.jpeg">
+                        <div class="layer">
+                            <h1>Forts</h1>
+                            <p>Forts are historical structures built for defense and strategic purposes. They often stand as symbols of a region’s heritage and valor.</p>
+                        </div>
+                    </div>
+                </a>
+                <a href="">
+                    <div class="work">
+                        <img src="../Images/Hill stations.jpeg">
+                        <div class="layer">
+                            <h1>Hill Stations</h1>
+                            <p> Hill stations are elevated areas with cooler climates, often nestled in the mountains. They provide a refreshing escape from the heat and bustle of city life.</p>
+                        </div>
+                    </div>
+                </a>
+                <a href="">
+                    <div class="work">
+                        <img src="../Images/Temples2.jpeg">
+                        <div class="layer">
+                            <h1>Temples</h1>
+                            <p>Temples are sacred places of worship, often featuring intricate architecture and rich history. They serve as spiritual centers where devotees gather for prayer and rituals. </p>
+                        </div>
+                    </div>
+                </a>
+                <a href="">
+                    <div class="work">
+                        <img src="../Images/Waterfalls.jpeg">
+                        <div class="layer">
+                            <h1>Waterfalls</h1>
+                            <p>Waterfalls are nature’s spectacular displays of power and beauty, where water cascades over a vertical drop, creating a mesmerizing sight and soothing sound.</p>
+                        </div>
+                    </div>
+                </a>
+             
+            </div>
+        </div>
+    </div>
+
+
+
+
+    <script>
+        hamburger = document.querySelector(".hamburger");
+        hamburger.onclick = function () {
+            navBar = document.querySelector(".nav-bar");
+            navBar.classList.toggle("active");
+        }
+    </script>
+</body>
+
+</html>
