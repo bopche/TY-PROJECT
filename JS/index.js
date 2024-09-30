@@ -9,35 +9,27 @@ function closeMenu() {
 
 
 
-let slideIndex = 1;
-showSlides(slideIndex);
+let slideIndex = 0;
+const slides = document.querySelectorAll(".slide");
 
-
-function plusSlides(n) {
-    showSlides(slideIndex += n);
+function showSlides() {
+    slides.forEach((slide, index) => {
+        slide.style.display = index === slideIndex ? "block" : "none";
+    });
 }
 
-
-function currentSlide(n) {
-    showSlides(slideIndex = n);
-}
-
-function showSlides(n) {
-    let i;
-    let slides = document.getElementsByClassName("mySlides");
-    let dots = document.getElementsByClassName("demo");
-    let captionText = document.getElementById("caption");
-    if (n > slides.length) { slideIndex = 1 }
-    if (n < 1) { slideIndex = slides.length }
-    for (i = 0; i < slides.length; i++) {
-        slides[i].style.display = "none";
+function nextSlide() {
+    slideIndex++;
+    if (slideIndex >= slides.length) {
+        slideIndex = 0;
     }
-    for (i = 0; i < dots.length; i++) {
-        dots[i].className = dots[i].className.replace(" active", "");
-    }
-    slides[slideIndex - 1].style.display = "block";
-    dots[slideIndex - 1].className += " active";
-    captionText.innerHTML = dots[slideIndex - 1].alt;
+    showSlides();
 }
+
+// Automatically change the slide every 3 seconds
+setInterval(nextSlide, 3000);
+
+// Initialize the slider
+showSlides();
 
 
