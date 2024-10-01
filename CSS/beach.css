@@ -7,13 +7,13 @@
 .container h1{
     text-align: center;
     padding: 20px;
-    color: rgb(93, 46, 10);
+    color: rgb(0, 0, 0);
 }
 .box{
-    background-color: #ede6e6;
-    height: 70vh;
+    background-color: #e6f1fd;
+    height: 60vh;
     width: 50%;
-    margin: 40px 50px;
+    margin: 40px 40px;
     border-radius: 25px;
     padding: 10px;
 
@@ -24,6 +24,38 @@
         
 }
 .img1{
-    height: 30vh;
+    height: 35vh;
     width: auto;
+    margin-top: 70px;
+}
+.box{
+   position: relative;
+}
+.box h1{
+   float: right;
+   margin-top: 60px;
+   margin-right: 140px;
+   background-color: #e6f1fd;
+}
+.box p{
+    margin-left: 360px;
+    background-color: #e6f1fd;
+    padding: 10px;
+    margin-top: -220px;  
+}
+.box button{
+    margin-left: 370px;
+    font-size: 15px;
+    padding: 5px;
+    
+}
+.rating{
+    margin-left: 370px;
+    background-color: #e6f1fd;
+
+}
+.rating label{
+    height: 40px;
+    width: 20%;
+    
 }
