@@ -5,7 +5,7 @@
     font-family: 'roboto',sans-serif;
 }
 body{
-    background-color: #b9a185;
+    background: color : 58970px;;
 }
 .heading{
     width: 90%;
@@ -30,7 +30,7 @@ body{
     height: 4px;
     display: block;
     margin:0 auto;
-    background-color: #4caf50;
+    background-color:brown;
 }
 .heading p{
 font-size: 18px;
