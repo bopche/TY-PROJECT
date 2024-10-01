@@ -1,0 +1,29 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: #fff;
+}
+.container h1{
+    text-align: center;
+    padding: 20px;
+    color: rgb(93, 46, 10);
+}
+.box{
+    background-color: #ede6e6;
+    height: 70vh;
+    width: 50%;
+    margin: 40px 50px;
+    border-radius: 25px;
+    padding: 10px;
+
+}
+
+.list1 {
+        display: flex;
+        
+}
+.img1{
+    height: 30vh;
+    width: auto;
+}
