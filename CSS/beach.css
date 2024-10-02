@@ -4,6 +4,130 @@
     box-sizing: border-box;
     background-color: #fff;
 }
+.slider {
+    position: relative;
+    width: 100%;
+    height: 30vh;
+    
+    overflow: hidden;
+    padding:  40px 100px;
+  }
+  .newimg{
+    height: 80vh;
+    width: 100%;
+    align-items: center;
+   
+    margin-top: 10px;
+    border-radius: 20px;
+  }
+  
+  .slides {
+    display: flex;
+    transition: transform 0.1s ease-in-out;
+    cursor: pointer;
+  }
+  .slide {
+    min-width: 100%;
+    box-sizing: border-box;
+  }
+  
+  img {
+    width: 100%;
+    vertical-align: middle;
+  }
+  
+   * {
+    box-sizing: border-box;
+  }
+  
+  
+  .container {
+    position: relative;
+  }
+  
+  
+  .mySlides {
+    display: none;
+  
+  }
+   .cursor {
+    cursor: pointer;
+  }
+  
+  .slide-img {
+    height: 80vh;
+  }
+  
+  .prev,
+  .next {
+    cursor: pointer;
+    position: absolute;
+    top: 40%;
+    width: auto;
+    padding: 16px;
+    margin-top: -50px;
+    color: white;
+    font-weight: bold;
+    font-size: 20px;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+    -webkit-user-select: none;
+  }
+  
+  
+  .next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+  }
+  
+  
+  .prev:hover,
+  .next:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+  }
+  
+  
+  .numbertext {
+    color: #f2f2f2;
+    font-size: 12px;
+    padding: 8px 12px;
+    position: absolute;
+    top: 0;
+  }
+  
+  
+  .caption-container {
+    text-align: center;
+    background-color: #222;
+    padding: 2px 16px;
+    color: white;
+  }
+  
+  .row:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+  
+  
+  .column {
+    float: left;
+    width: 16.66%;
+    height: 40vh;
+  }
+  
+  
+  .demo {
+    opacity: 0.6;
+    height: 20vh;
+  }
+  
+  .active,
+  .demo:hover {
+    opacity: 1;
+  }
+
+
 .container h1{
     text-align: center;
     padding: 20px;
@@ -15,23 +139,24 @@
     width: 50%;
     margin: 40px 40px;
     border-radius: 25px;
-    padding: 10px;
+    padding: 15px;
 
 }
 
-.list1 {
+.list {
         display: flex;
         
 }
+
+
 .img1{
-    height: 50vh;
+    height: 55vh;
     width: 50%;
-    margin-top: 30px;
+    margin-top: 5px;
+    border-radius: 25px 1px 1px 25px ;
     
 }
-.box{
-   position: relative;
-}
+
 .box h1{
    float: right;
    margin-top: 60px;
@@ -39,61 +164,43 @@
    background-color: #7eb8f6;
 }
 .box p{
-    margin-left: 360px;
+    margin-left: 340px;
     background-color: #7eb8f6;
     padding: 10px;
     margin-top: -300px;  
 }
 .box button{
-    margin-left: 375px;
+    margin-left: 355px;
     font-size: 15px;
     padding: 5px;
    background-color: #f9bf3b;
    margin-top: 10px;
     
 }
-.rating{
-    margin-left: 370px;
-    margin-right: 170px;
-    background-color: #7eb8f6;
+.wrapper {
+  position: relative;
+  background-color: #7eb8f6;
+  margin-left: 348px;
+  margin-right: 190px;
+  
+}
+.wrapper .stars {
+  background-color: #7eb8f6;
+  display: flex;
+  align-items: center;
+  gap: 2px;
+  padding: 3px;
+}
 
+.wrapper .stars .star {
+  font-size: 17px;
+  color: #e6e6e6;
+  background-color: #7eb8f6;
+  cursor: pointer;
+  transition: color 0.2s ease;
 }
-.rating >*{
-    float: right;
-}
-.rating label{
-    height: 40px;
-    width: 20%;
-    display: block;
-    position: relative;
-    cursor: pointer;
-}
-.rating label::after{
-    transition: all 0.4s ease-out;
-    -webkit-font-smoothing:antialiased ;
-    position: absolute;
-    content: "✰";
-    color: #444;
-    top:0;
-    left:0;
-    width: 100%;
-    height: 100%;
-    text-align: center;
-    font-size: 30px;
-    -webkit-animation: 1s pulse ease;
-    animation:1s pulse ease ;
-    background-color: #7eb8f6;
-}
-.rating label:hover::after{
-    color: #5e5e5e;
-    text-shadow: 0 0 15px #5e5e5e;
-}
-.rating input{
-    display: none;
-}
-.rating input:checked + label::after,
-.rating input:checked ~ label::after{
-    content:"✰";
-    color: #f9bf3b;
-    text-shadow: 0 0 20px #f9bf3b;
+
+.wrapper .stars .star.active {
+  color: #f9bf3b;
+  text-shadow: 0 0 20px #f9bf3b;
 }
