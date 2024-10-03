@@ -115,7 +115,7 @@ nav ul li:hover ul.tour-dropdown {
 }
 
 img {
-  width: 100%;
+  width: 90%;
   vertical-align: middle;
 
 }
@@ -218,12 +218,22 @@ img {
   color: rgb(0, 0, 0);
 }
 .box{
-  background-color: #7eb8f6;
+  
   height: 60vh;
   width: 50%;
-  margin: 40px 40px;
+  margin: 40px 20px;
   border-radius: 25px;
   padding: 15px;
+
+}
+
+.box-linear-gradient{
+  height: 60vh;
+  background: linear-gradient(to bottom, rgb(104, 126, 240), rgb(71, 176, 241),rgb(192, 212, 240));
+  width: 100%;
+  border-radius: 25px;
+  padding: 15px;
+
 
 }
 
@@ -244,32 +254,33 @@ img {
 .box h1{
  float: right;
  margin-top: 60px;
- margin-right: 140px;
- background-color: #7eb8f6;
+ text-align: center;
+ margin-right: 150px;
+
 }
 .box p{
   margin-left: 340px;
-  background-color: #7eb8f6;
   padding: 10px;
-  margin-top: -300px;  
+  margin-top: -300px; 
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  font-size: 18px; 
 }
 .box button{
   margin-left: 355px;
   font-size: 15px;
   padding: 5px;
  background-color: #f9bf3b;
- margin-top: 10px;
+ margin-top: 20px;
+ border-radius: 5px;
   
 }
 .wrapper {
 position: relative;
-background-color: #7eb8f6;
 margin-left: 348px;
 margin-right: 190px;
 
 }
 .wrapper .stars {
-background-color: #7eb8f6;
 display: flex;
 align-items: center;
 gap: 2px;
@@ -279,7 +290,6 @@ padding: 3px;
 .wrapper .stars .star {
 font-size: 17px;
 color: #e6e6e6;
-background-color: #7eb8f6;
 cursor: pointer;
 transition: color 0.2s ease;
 }
