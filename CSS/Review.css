@@ -1,22 +1,24 @@
 body{
-    background: #eef3f7;
+    margin: 0px;
+    padding: 0px;
+    background: #faf0e048;
     font-family: 'Poppins', sans-serif;
 }
 .bag{
-    background-color: #04b5fb6d;
+    background-color: #987132af;
 }
 .bod{
-    border: 1px solid #04b5fb6d;
+    border: 1px solid #987132af;
 }
 .wdt{
     width: 50px;
     height: 50px;
 }
 .c-bag{
-    background-color: rgba(198, 196, 196, 0.213);
+    background-color: #9871322b;
 }
 .r-bag{
-    background-color: #eef3f7;
+    background-color: #fffefdce;
 }
 .ha{
     color: #81c2e3;
@@ -29,9 +31,16 @@ body{
     transform: translateY(-10px);
 }
 #img{
-    margin-top: -30px;
+    margin-top: 20px;
     margin-left: -30px;
 }
 #main{
-    margin-top: 30px;
+    margin-top: 50px;
 }
+#text-box{
+    margin-top: 70px;
+}
+.container{
+    margin-top: 50px;
+}
+
