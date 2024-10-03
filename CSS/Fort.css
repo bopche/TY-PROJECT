@@ -229,7 +229,7 @@ body {
   
   .box-linear-gradient{
     height: 60vh;
-    background: linear-gradient(to bottom, rgb(104, 126, 240), rgb(71, 176, 241),rgb(192, 212, 240));
+    background: linear-gradient(to bottom, rgb(170, 117, 77), rgb(241, 157, 109),rgb(244, 207, 182));
     width: 100%;
     border-radius: 25px;
     padding: 15px;
