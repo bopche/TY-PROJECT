@@ -96,10 +96,12 @@ nav ul li:hover ul.tour-dropdown {
   overflow: hidden;
   padding:  10px 40px;
 }
+
 .newimg{
   height: 80vh;
-  width: 100%;
+  width: 95%;
   align-items: center;
+  position: absolute;
 
 }
 
@@ -107,6 +109,7 @@ nav ul li:hover ul.tour-dropdown {
   display: flex;
   transition: transform 0.1s ease-in-out;
   cursor: pointer;
+  
 }
 .slide {
   min-width: 100%;
@@ -296,4 +299,42 @@ transition: color 0.2s ease;
 .wrapper .stars .star.active {
 color: #f9bf3b;
 text-shadow: 0 0 20px #f9bf3b;
+}
+ 
+.more-detail {
+  text-decoration: none;
+  position: relative;
+  color: #fff;
+  font-size: 25px;
+  margin-left: 650px;
+  margin-top:270px ;
+  display: flex;
+  width: 145px;
+  padding:10px;
+  font-size: 25px;
+  background-color: #f9bf3b;
+  text-shadow: 0 0 20px #fff;
+  border-radius: 10px;
+  
+  }
+.more-detail:hover{
+  color: #000;
+  background-color: rgb(6, 250, 250);
+  box-shadow: 0 0 20px #fff;
+  cursor: pointer;
+}
+.heading{
+  position: absolute;
+  color: #fff;
+  margin-top: 200px;
+  font-size: 60px;
+  margin-left: 560px;
+  font-size: 25px;
+  display: flex;
+
+}
+.slide h1{
+  font-size: 50px;
+  color: #fff;
+  text-align: center;
 }
