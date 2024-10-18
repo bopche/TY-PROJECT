@@ -27,7 +27,7 @@ body {
     margin-left: 30%;
     margin-right: 30%;
     list-style-type: none;
-    background:#d8cbc4;
+    background:#bca89f;
     font-size: 18px;
     transition: 0.2s;
     
@@ -40,12 +40,12 @@ body {
   
   /* Set all odd list items to a different color (zebra-stripes) */
   ul li:nth-child(odd) {
-    background:#bca89f;
+    background:#d8cbc4;
   }
   
   /* Darker background-color on hover */
   ul li:hover {
-    background:gray;
+    background:cornsilk;
   }
   
   /* When clicked on, add a background color and strike out text */
