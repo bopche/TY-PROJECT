@@ -9,13 +9,14 @@
     justify-content: center;
     height: 100vh;
     margin: 0;
-    background-color: black;
+    background-color: white;
     color: #fff;
   }
   
   .container {
-    display: flex;
-    width: 120vw;
+    display: inline-flex;
+    width: 100%;
+    
 
   }
   
@@ -24,7 +25,16 @@
     background-position: center;
     background-repeat: no-repeat;
     margin-top: 100px;
+    display: flex;
+    
+
   }
+
+  .bg-image:hover {
+    box-shadow: rgb(66, 66, 66) 5px 2px;
+    
+  }
+
   
   /* IMAGES SOURCES  */
   /* https://wallpapercave.com/pc-games-wallpapers  */
@@ -86,3 +96,120 @@
     transition: opacity 0.3s ease-in 0.4s;
     color: black;
   }
+
+
+  * {
+    margin: 0;
+    padding: 0;
+  }
+  
+  body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    background: white;
+    min-height: 100vh;
+  }
+  
+
+  
+  .container {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    margin: 60px 0;
+  }
+  
+  .container .card {
+    position: relative;
+    width: 420px;
+    height: 550px;
+    background: linear-gradient(to bottom, rgb(163, 197, 248), rgb(150, 185, 247),rgb(219, 230, 248));
+    margin: 40px;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.5);
+    border-radius: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    backdrop-filter: blur(10px);
+  }
+  
+  .container .card .content {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    transition: 0.5s;
+  }
+  
+  .container .card:hover .content {
+    transform: translateY(-20px);
+  }
+  
+  .container .card .content .imgBx {
+    position: relative;
+    width: 300px;
+    height: 250px;
+    overflow: hidden;
+    
+  }
+  
+  .container .card .content .imgBx img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  .container .card .content .contentBx h2 {
+    color: black;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-weight: 500;
+    font-size: 22px;
+    text-align: center;
+    margin: 20px 0 10px;
+    line-height: 1.1em;
+  }
+  
+  .container .card .content .contentBx h2 span {
+    font-size: 15px;
+    font-weight: 300;
+    text-transform: initial;
+  }
+  
+  .container .card .sci {
+    position: absolute;
+    bottom: 50px;
+    display: flex;
+  }
+  
+  .container .card .sci li {
+    list-style: none;
+    margin: 0 10px;
+    transform: translateY(40px);
+    transition: 0.5s;
+    opacity: 0;
+  }
+  
+  
+  .container .card:hover .sci li {
+    transform: translateY(0px);
+    opacity: 1;
+  }
+  
+  .container .card .sci li p {
+    color: black;
+    font-size: 15px;
+    text-align: center;
+  
+  }
+  
+  
