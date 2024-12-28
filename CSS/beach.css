@@ -153,7 +153,7 @@ body {
 .rating span {
   font-size: 2rem;
   cursor: pointer;
-  color: rgb(128, 128, 128);
+  color: rgb(98, 98, 98);
   transition: color 0.3s;
 }
 
@@ -164,8 +164,7 @@ body {
 
 .book-now {
   background: #ff6347;
-  color: white;
-  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  color: black;
   border: none;
   padding: 10px 20px;
   font-size: 1rem;
@@ -173,13 +172,26 @@ body {
   cursor: pointer;
   margin-bottom: 25px;
   transition: background 0.3s;
+  
 }
 
 .book-now:hover {
   background: white;
+  text-decoration: none !important; 
   color: #ff6347;
   border-radius: 10px ;
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+.book-now a{
+  color: white;
+  text-decoration: none !important;  
+}
+
+.book-now a:hover {
+  
+  color: #ff6347;
+  text-decoration: none !important; 
 }
 
 /* General Footer Styling */
