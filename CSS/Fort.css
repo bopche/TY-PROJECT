@@ -91,6 +91,109 @@ body {
   transform: scale(1.1); /* Scale up the link slightly when hovered */
 }
 
+.card-container {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 70px;
+  justify-content: center;
+  gap: 90px;
+  margin-top: 50px;
+  
+}
+
+.card {
+  width: 35%;
+  height: 550px;
+  background: #f6b2a6;
+  box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+  border-radius: 10px;
+  overflow: hidden;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.card:hover {
+  border-radius: 20px;
+  box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+}
+
+.card-image img {
+  width: 100%;
+  height: 295px;
+  display: block;
+  transition: transform 0.3s;
+}
+
+.card-image img:hover {
+  transform: scale(1.1);
+}
+
+.card-content {
+  padding: 20px;
+  text-align: center;
+}
+
+.card-content h3 {
+  margin: 10px 0;
+  font-size: 1.7rem;
+}
+
+.card-content p {
+  font-size: 1.3rem;
+  margin: 10px 0 20px;
+  color: black;
+}
+
+.rating {
+  display: flex;
+  justify-content: center;
+  gap: 5px;
+  margin-bottom: 20px;
+}
+
+.rating span {
+  font-size: 2rem;
+  cursor: pointer;
+  color: rgb(98, 98, 98);
+  transition: color 0.3s;
+}
+
+.rating span:hover,
+.rating span.active {
+  color: #ff6347;
+}
+
+.book-now {
+  background: #ff6347;
+  color: black;
+  border: none;
+  padding: 10px 20px;
+  font-size: 1rem;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-bottom: 25px;
+  transition: background 0.3s;
+  
+}
+
+.book-now:hover {
+  background: white;
+  text-decoration: none !important; 
+  color: #ff6347;
+  border-radius: 10px ;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+.book-now a{
+  color: white;
+  text-decoration: none !important;  
+}
+
+.book-now a:hover {
+  
+  color: #ff6347;
+  text-decoration: none !important; 
+}
+
 
 /* General Footer Styling */
 /* Footer Styling */
