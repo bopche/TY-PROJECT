@@ -1,0 +1,368 @@
+body {
+    padding: 0px;
+    margin: 0px;
+  }
+  
+  
+  /* Navbar Styling */
+  .navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    color: white;
+    padding: 20px;
+    z-index: 1000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .navbar .logo h2{
+    font-size: 28px;
+    font-weight:bolder;
+    font-family: Papyrus;
+    margin-left: 2px;
+    transition: transform 0.3s ease;
+    margin-bottom: 20px;
+    display: inline-block;
+    position: relative;
+  }
+  
+  .navbar .logo img{
+    width: 130px;
+    height: 115px;
+    border-radius: 50%;
+    margin-left: 12px;
+    position: absolute;
+    margin-bottom: 15px;
+    margin-top: 20px;
+  }
+  
+  .navbar .logo:hover {
+    transform: scale(1.1); /* Slightly scale the logo on hover */
+  }
+  
+  .navbar .nav-links {
+    list-style: none;
+    display: flex;
+  }
+  
+  .navbar .nav-links li {
+    margin-left: 40px;
+    position: relative; /* For position reference for the underline effect */
+  }
+  
+  .navbar .nav-links a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    transition: color 0.3s ease, transform 0.3s ease;
+    padding-bottom: 5px; /* Add some space for the underline */
+  }
+  
+  /* Dynamic hover effects */
+  .navbar .nav-links a:hover {
+    color: #ff6347; /* Change text color on hover */
+    transform: translateY(-3px); /* Move up slightly when hovered */
+  }
+  
+  /* Underline effect on hover */
+  .navbar .nav-links a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    background-color: #ff6347;
+    left: 50%;
+    bottom: 0;
+    transition: width 0.3s ease, left 0.3s ease;
+  }
+  
+  .navbar .nav-links a:hover::after {
+    width: 100%;
+    left: 0;
+  }
+  
+  /* Hover effect for navbar links */
+  .navbar .nav-links li:hover {
+    transform: scale(1.1); /* Scale up the link slightly when hovered */
+  }
+  
+  .card-container {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 70px;
+    justify-content: center;
+    gap: 90px;
+    margin-top: 50px;
+    
+  }
+  
+  .card {
+    width: 25%;
+    height: 390px;
+    background: #f6b2a6;
+    box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+    border-radius: 10px;
+    overflow: hidden;
+    transition: transform 0.3s, box-shadow 0.3s;
+  }
+  
+  .card:hover {
+    border-radius: 20px;
+    box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+  }
+  
+  .card-image img {
+    width: 100%;
+    height: 295px;
+    display: block;
+    transition: transform 0.3s;
+  }
+  
+  .card-image img:hover {
+    transform: scale(1.1);
+  }
+  
+  .card-content h3{
+    padding: 20px;
+    text-align: center;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 1.7rem;
+    margin-top: 70px;
+    color: #d3c8c8;
+  }
+  
+  .book-now {
+    background: #ff6347;
+    color: black;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-bottom: 25px;
+    transition: background 0.3s;
+    
+  }
+  
+  .book-now:hover {
+    background: white;
+    text-decoration: none !important; 
+    color: #ff6347;
+    border-radius: 10px ;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  }
+  
+  .book-now a{
+    color: white;
+    text-decoration: none !important;  
+  }
+  
+  .book-now a:hover {
+    
+    color: #ff6347;
+    text-decoration: none !important; 
+  }
+  
+  /* General Footer Styling */
+  /* Footer Styling */
+  .footer {
+    position: relative;
+    padding: 80px 20px 20px;
+    background-color: #ff6347;
+    color: black;
+    overflow: hidden;
+    font-family: 'Arial', sans-serif;
+    z-index: 1;
+  }
+  
+  /* Footer Styling */
+  .footer {
+    position: relative;
+    padding: 100px 20px 20px;
+    background-color: #ff6347;
+    color: black;
+    overflow: hidden;
+    font-family: 'Arial', sans-serif;
+    z-index: 1;
+  }
+  
+  /* Footer Content */
+  .footer-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: flex-start;
+    z-index: 2;
+  }
+  
+  .footer-section {
+    flex: 1 1 calc(25% - 20px);
+    margin: 10px;
+  }
+  
+  .footer-section h3 {
+    font-size: 24px;
+    margin-bottom: 15px;
+  }
+  
+  .footer-section p {
+    font-size: 16px;
+    margin-bottom: 10px;
+  }
+  
+  ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  ul:hover{
+    color: white;
+  }
+  
+  ul li {
+    margin: 8px 0;
+  }
+  
+  ul li:hover{
+    color: white;
+  }
+  
+  ul li a {
+    color: black;
+    text-decoration: none;
+    font-size: 16px;
+    transition: color 0.3s ease;
+  }
+  
+  ul li a:hover {
+    color: #ffffff;
+  }
+  
+  /* Social Media Icons */
+  .social-icons {
+    display: flex;
+    gap: 15px;
+  }
+  
+  .social-icon {
+    text-decoration: none;
+    color: black;
+    font-size: 20px;
+    transition: transform 0.3s ease, color 0.3s ease;
+  }
+  
+  .social-icon:hover {
+    transform: scale(1.2);
+    color: white;
+  }
+  
+  /* Subscribe Section */
+  .footer-subscribe {
+    flex: 1 1 100%;
+    text-align: center;
+    margin-top: 20px;
+  }
+  
+  .footer-subscribe input {
+    padding: 12px 25px;
+    margin-top: 10px;
+    border-radius: 5px;
+    border: none;
+    outline: none;
+    width: 250px;
+  }
+  
+  .footer-subscribe button {
+    margin-top: 10px;
+    padding: 12px 25px;
+    background-color: black;
+    color: #ff6347;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+  }
+  
+  .footer-subscribe button:hover {
+    background-color: #ffffff;
+    color: black;
+  }
+  
+  /* Wave Animations */
+  .footer-waves {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 200px;
+    z-index: 0;
+    overflow: hidden;
+  }
+  
+  .footer-waves::before,
+  .footer-waves::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    width: 150%;
+    height: 100px;
+    background-color: #fd8b77;
+    border-radius: 50%;
+    animation: wave-animation 8s infinite ease-in-out;
+  }
+  
+  .footer-waves::before {
+    animation-delay: -3s;
+    opacity: 0.7;
+  }
+  
+  .footer-waves::after {
+    animation-delay: -6s;
+    opacity: 0.5;
+  }
+  
+  @keyframes wave-animation {
+    0%, 100% {
+      transform: translateX(0) translateY(0);
+    }
+    50% {
+      transform: translateX(-25%) translateY(15px);
+    }
+  }
+  
+  /* Footer Bottom Bar */
+  .footer-bottom {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 14px;
+    color: rgba(255, 255, 255, 0.7);
+  }
+  
+  /* Hover Effects for All Links */
+  .footer-content a {
+    transition: color 0.3s ease, transform 0.3s ease;
+  }
+  
+  .footer-content a:hover {
+    color: #ff6347;
+    transform: scale(1.1);
+  }
+  
+.liked p{
+    font-size: 40px;
+    margin-top: -250px;
+}
+.liked{
+    margin-top:-290px;
+}
+button{
+    margin-top: 90px;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+}
