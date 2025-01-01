@@ -135,12 +135,14 @@ body {
 .card-content h3 {
   margin: 10px 0;
   font-size: 1.7rem;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
 .card-content p {
-  font-size: 1.3rem;
+  font-size: 1.1rem;
   margin: 10px 0 20px;
   color: black;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
 .rating {
