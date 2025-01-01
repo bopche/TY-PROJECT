@@ -12,72 +12,110 @@
 </head>
 
 <body>
-    <nav>
-        <!--<div class="brand-name">
-        <img src="./images/logo.png" class="logo">
-        </div>-->
 
-        <ul id="sideMenu">
-            <li><a href="../Index.html">Home</a></li>
-            <li><a href="../Pages/Explore.html">Explore </a></li>
-            <li><a href="../pages/about.html">About</a></li>
-            <li><a href="../pages/contact.html">Contact</a></li>
-            <li><a href="../pages/login.html">Login</a></li>
-            <li><a href="../Pages/Review.html">Review</a></li>
-            <li><a href="../pages/book now.html">To-Go list</a></li>
-            <li><a href="../pages/book now.html">Liked places</a></li>
-            <i class="fa-solid fa-xmark" onclick="closeMenu()"></i>
-        </ul>
-        <i class="fa-solid fa-bars" onclick="openMenu()"></i>
-    </nav>
+  <!-- Navbar -->
+ <nav class="navbar">
+  <div class="logo">
+    <img src="../Images/Map_and_Plane_Logo-removebg-preview.png" alt="Tech Innovators Logo" />
+          <h2>ODYSSEY</h2>
+  </div>
+  <ul class="nav-links">
+    <li><a href="/index.html">Home</a></li>
+    <li><a href="../Pages/Explore.html">Explore</a></li>
+    <li><a href="./Pages/About.html">About</a></li>
+    <li><a href="../Pages/Contact.html">Contact</a></li>
+    <li><a href="../Pages/Login.html">Login</a></li>
+    <li><a href="../Pages/Review.html">Reviews</a></li>
+    <li><a href="../Pages/To-do list.html">To-Go List</a></li>
+    <li><a href="../Pages/">Liked Places</a></li>
 
-  <div class="container">
-    <div class="content">
-      <div class="left-side">
-        <div class="address details">
-          <i class="fas fa-map-marker-alt"></i>
-          <div class="topic">Address</div>
-          <div class="text-one">pune NP12</div>
-          <div class="text-two">wagholi 06</div>
-        </div>
-        <div class="phone details">
-          <i class="fas fa-phone-alt"></i>
-          <div class="topic">Phone</div>
-          <div class="text-one">+0098 9893 5647</div>
-          <div class="text-two">+0096 3434 5678</div>
-        </div>
-        <div class="email details">
-          <i class="fas fa-envelope"></i>
+  </ul>
+</nav>
+ 
 
-          <div class="topic">Email</div>
-          <div class="text-one">roadtocode@gmail.com</div>
-          <div class="text-two">info.codinglab@gmail.com</div>
-        </div>
-      </div>
-      <div class="right-side">
-        <div class="topic-text">Send us a Message</div>
-        <p>If you have book your trip from me or any types of quries related to my tourist website, you can send me
-          message from here. It's my pleasure to help you.</p>
-        <form action="#">
-          <div class="input-box">
-            <input type="text" placeholder="Enter your name">
-          </div>
-          <div class="input-box">
-            <input type="text" placeholder="Enter your email">
-          </div>
-          <div class="input-box">
-            <input type="text" placeholder="Enter your message">
-          </div>
-          <div class="input-box message-box">
-
-          </div>
-          <div class="button">
-            <button type="button" onclick="alert('message have been successfully send')">Send</button>
-
-          </div>
-
-
-        </form>
-      </div>
+<div class="contact-card">
+  <div class="contact-left">
+    <h2>Reach Out to Us</h2>
+    <p>Need help planning your next adventure? We're here to guide you every step of the way. Drop us a message!</p>
+    <ul>
+      <li><i class="fas fa-envelope"></i> www.odysseytravels.com</li>
+      <li><i class="fas fa-phone"></i> +91 7856465768</li>
+      <li><i class="fas fa-map-marker-alt"></i>3643 Wanderers Street, Avenue Park, Maharashtra</li>
+    </ul>
+    <div class="image-container">
+      <img src="/Images/Tourists.jpg" alt="Travel image">
     </div>
   </div>
+  <div class="contact-right">
+    <form id="contact-form">
+      <div class="form-group">
+        <input type="text" id="name" name="name" placeholder="Your Name" required>
+      </div>
+      <div class="form-group">
+        <input type="email" id="email" name="email" placeholder="Your Email" required>
+      </div>
+      <div class="form-group">
+        <textarea id="message" name="message" placeholder="Your Message" rows="6" required></textarea>
+      </div>
+      <button type="submit" class="btn-submit">Send Message</button>
+    </form>
+  </div>
+</div>
+
+
+  <footer class="footer">
+    <div class="footer-waves"></div>
+
+    <div class="footer-content">
+        <!-- Quick Links Section -->
+        <div class="footer-section">
+            <h3>Quick Links</h3>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Destinations</a></li>
+                <li><a href="#">Travel Packages</a></li>
+                <li><a href="#">About Us</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </div>
+
+        <!-- Contact Information Section -->
+        <div class="footer-section">
+            <h3>Contact Us</h3>
+            <p>123 Travel Lane, Wanderlust City</p>
+            <p>Email: info@travelwebsite.com</p>
+            <p>Phone: +1 (555) 123-4567</p>
+        </div>
+
+        <!-- Social Media Section -->
+        <div class="footer-section">
+            <h3>Follow Us</h3>
+            <div class="social-icons">
+                <a href="#" class="social-icon">Facebook</a>
+                <a href="#" class="social-icon">Twitter</a>
+                <a href="#" class="social-icon">Instagram</a>
+                <a href="#" class="social-icon">YouTube</a>
+            </div>
+        </div>
+
+        <!-- Subscription Section -->
+        <div class="footer-subscribe">
+            <h3>Subscribe to Our Newsletter</h3>
+            <p>Get the latest travel deals and news right in your inbox!</p>
+            <input type="email" placeholder="Enter your email">
+            <button>Subscribe</button>
+        </div>
+    </div>
+
+    <!-- Footer Bottom Bar -->
+    <div class="footer-bottom">
+        <p>&copy; 2024 TravelWebsite. All rights reserved. Designed with passion for travel lovers.</p>
+    </div>
+</footer>
+
+<script src="/JS/Contact.js"></script> 
+<script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+
+
+</body>
+</html>
