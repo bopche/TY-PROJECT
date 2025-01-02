@@ -173,7 +173,7 @@ body {
     margin-bottom: 70px;
     box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
     text-align: center;
-    padding: 1.5rem;
+    padding: 3.5rem;
   }
   
   .team-card img {
@@ -203,7 +203,7 @@ body {
   border: 1px solid #ddd;
   border-radius: 15px;
   text-align: center;
-  padding: 20px;
+  padding: 60px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   overflow: hidden;
   transition: transform 0.3s ease;
