@@ -153,11 +153,23 @@ body {
   max-width: 80%;
   box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.5);
 }
-
+/* 
 .slide-content h1 {
   font-size: 40px;
   margin-bottom: 10px;
+} */
+.slide-content h1 {
+  font-size: 40px;
+  margin-bottom: 10px;
+  font-family: 'Poppins', sans-serif; /* Use a modern, elegant font */
+  background: linear-gradient(90deg, #ffffff, #c9c7c7, #777777); /* Gradient colors */
+  -webkit-background-clip: text; /* Clips the gradient to the text */
+  -webkit-text-fill-color: transparent; /* Makes the background gradient visible */
+  text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5); /* Adds a shadow for depth */
+  font-weight: 700; /* Ensures bold text for emphasis */
+  letter-spacing: 1px; /* Slight spacing for readability */
 }
+
 
 .slide-content p {
   font-size: 20px;
