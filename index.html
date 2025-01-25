@@ -4,30 +4,68 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>ODYSSEY</title>
-  <link rel="stylesheet" href="./CSS/Index.css">
+  <link rel="stylesheet" href="./CSS/index.css">
+  <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Alex+Brush" rel="stylesheet">
+
+  <style>
+    
+#navbar {
+  position: sticky;
+  padding: 10px 50px;
+  top: 0;
+  overflow: hidden;
+  background: linear-gradient(to Bottom, #b4aca77d 0%, #ffffffd5 100%);
+}
+
+
+#navbar a {
+  display: block;
+  color: #030303;
+  text-align: center;
+  padding: 15px 20px;
+  text-decoration: none;
+  float: right;
+  cursor: pointer;
+}
+
+#navbar a:hover {
+  color: #ff6347;
+}
+
+.content {
+  padding: 16px;
+}
+
+  </style>
 </head>
 <body>
-  <!-- Navbar -->
-  <nav class="navbar">
-    <div class="logo">
-      <img src="./Images/Map_and_Plane_Logo-removebg-preview.png" alt="Tech Innovators Logo" />
-            <h2>ODYSSEY</h2>
-    </div>
-    <ul class="nav-links">
-      <li><a href="/index.html">Home</a></li>
-      <li><a href="/Pages/Explore.html">Explore</a></li>
-      <li><a href="/Pages/About.html">About</a></li>
-      <li><a href="/Pages/Contact.html">Contact</a></li>
-      <li><a href="./Pages/Login.html">Login</a></li>
-      <li><a href="./Pages/Review.html">Reviews</a></li>
-      <li><a href="./Pages/To-do list.html">To-Go List</a></li>
-      <li><a href="/Pages/likedplace.html">Liked Places</a></li>
+  <div id="navbar">
+    <a href="#">Home</a>
+    <a href="#">Explore</a>
+    <a href="#">About</a>
+    <a href="#">Contact</a>
+    <a href="#">Reviews</a>
+    <a href="#">Liked Places</a>
+    <a href="#">Login</a>
 
-    </ul>
-  </nav>
+  
+  </div>
+ <div class="head-container">
+  <img class="head-img" src="./Images/beautiful-tropical-beach-sea.jpg">
+  <div class="head-container2">
+    <h1>EXPLORE</h1>
+    <p>your amazing city</p>
+    <p class="content-1">Find great places to stay, eat, shop, or visit from local experts<br>
+      Or browse the highlights
+    </p>
+  </div>
+ 
+ </div>
 
-  <!-- Image Slider -->
-  <div class="slider">
+ <div class="card-c"></div>
+
+  <!--<div class="slider">
     <div class="slide" style="background-image: url('./Images/beautiful-waterfall-landscape.jpg');">
       <div class="slide-content">
         <h1>Discover New Horizons</h1>
@@ -63,14 +101,13 @@
           <a href="./Pages/Explore.html" class="cta-button">Learn More</a>
         </div>
       </div>
-  </div>
+  </div>-->
 
-  
-<footer class="footer">
+<!--<footer class="footer">
   <div class="footer-waves"></div>
 
   <div class="footer-content">
-      <!-- Quick Links Section -->
+    
       <div class="footer-section">
           <h3>Quick Links</h3>
           <ul>
@@ -82,7 +119,7 @@
           </ul>
       </div>
 
-      <!-- Contact Information Section -->
+      
       <div class="footer-section">
           <h3>Contact Us</h3>
           <p>Wanderes Street, Avenue Park, Maharashtra.</p>
@@ -90,7 +127,6 @@
           <p>Phone :- +91 5646768696</p>
       </div>
 
-      <!-- Social Media Section -->
       <div class="footer-section">
           <h3>Follow Us</h3>
           <div class="social-icons">
@@ -101,7 +137,6 @@
           </div>
       </div>
 
-      <!-- Subscription Section -->
       <div class="footer-subscribe">
           <h3>Subscribe to Our Newsletter</h3>
           <p>Get the latest travel deals and news right in your inbox!</p>
@@ -110,11 +145,11 @@
       </div>
   </div>
 
-  <!-- Footer Bottom Bar -->
+
   <div class="footer-bottom">
       <p>&copy; 2024 TravelWebsite. All rights reserved. Designed with passion for travel lovers.</p>
   </div>
-</footer>
+</footer>-->
 
   <script src="./JS/index.js"></script>
 </body>
