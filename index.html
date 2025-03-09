@@ -1,109 +1,1413 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>ODYSSEY</title>
-  <link rel="stylesheet" href="./CSS/index.css">
+ 
   <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Alex+Brush" rel="stylesheet">
-
+  <link href="https://fonts.googleapis.com/css?family=Alex+Brush" rel="stylesheet">
   <style>
-    
-#navbar {
-  position: sticky;
-  padding: 10px 50px;
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap');
+  
+  @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+  
+  
+  
+  @import url('https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@700&display=swap');
+  
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Barlow Semi Condensed', sans-serif;
+  }
+  
+  /* Navbar Styling */
+.navbar {
+  position: fixed;
   top: 0;
-  overflow: hidden;
-  background: linear-gradient(to Bottom, #b4aca77d 0%, #ffffffd5 100%);
+  left: 0;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  color: white;
+  padding: 20px;
+  z-index: 1000;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
+.navbar .logo h2{
+  font-size: 28px;
+  font-weight:bolder;
+  font-family: Papyrus;
+  margin-left: 2px;
+  transition: transform 0.3s ease;
+  margin-bottom: 20px;
+  display: inline-block;
+  position: relative;
+}
 
-#navbar a {
-  display: block;
-  color: #030303;
-  text-align: center;
-  padding: 15px 20px;
+.navbar .logo img{
+  width: 130px;
+  height: 115px;
+  border-radius: 50%;
+  margin-left: 12px;
+  position: absolute;
+  margin-bottom: 15px;
+  margin-top: 20px;
+}
+
+.navbar .logo:hover {
+  transform: scale(1.1); /* Slightly scale the logo on hover */
+}
+
+.navbar .nav-links {
+  list-style: none;
+  display: flex;
+}
+
+.navbar .nav-links li {
+  margin-left: 40px;
+  position: relative; /* For position reference for the underline effect */
+}
+
+.navbar .nav-links a {
   text-decoration: none;
-  float: right;
-  cursor: pointer;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: color 0.3s ease, transform 0.3s ease;
+  padding-bottom: 5px; /* Add some space for the underline */
 }
 
-#navbar a:hover {
+/* Dynamic hover effects */
+.navbar .nav-links a:hover {
+  color: #ff6347; /* Change text color on hover */
+  transform: translateY(-3px); /* Move up slightly when hovered */
+}
+
+/* Underline effect on hover */
+.navbar .nav-links a::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 2px;
+  background-color: #ff6347;
+  left: 50%;
+  bottom: 0;
+  transition: width 0.3s ease, left 0.3s ease;
+}
+
+.navbar .nav-links a:hover::after {
+  width: 100%;
+  left: 0;
+}
+
+/* Hover effect for navbar links */
+.navbar .nav-links li:hover {
+  transform: scale(1.1); /* Scale up the link slightly when hovered */
+}
+
+  
+  #mountain {
+    width: 100%;
+  
+  }
+  
+  
+  
+  .video-title-2 {
+    margin-top: -350px;
+    position: absolute;
+    font-family: 'Poppins', sans-serif;
+    color: #f8d9d9;
+    text-align: center;
+    margin-left: 20%;
+    font-size: 27px;
+  }
+  
+  .wrapper {
+    position: absolute;
+    margin-top: -550px;
+    gap: 3em;
+    text-align: center;
+    margin-left: 15%;
+  
+  }
+  
+  .w-text {
+    font-size: 5em;
+    text-decoration: none;
+    text-align: center;
+    text-transform: uppercase;
+    line-height: 1;
+    color: transparent;
+    -webkit-text-stroke: 1.5px #fd2c08a9;
+    text-shadow: 0 0 0 #f8d9d9;
+    transition: all 250ms;
+  
+  }
+  
+  .w-text:hover {
+    text-shadow: 4px 4px 0 #fff;
+    transform: translate(-2px, -2px)
+  }
+  
+  .heading {
+    text-align: center;
+    font-size: 50px;
+    font-family: 'Roboto', sans-serif;
+    margin: 40px;
+  }
+  
+  .card-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    padding: 20px 40px;
+    gap: 20px;
+    /* Adds space between cards */
+  }
+  
+  .card {
+    display: grid;
+    place-items: center;
+    width: 80vw;
+    max-width: 21.875rem;
+    height: 28.125rem;
+    overflow: hidden;
+    border-radius: 0.625rem;
+    box-shadow: 0.25rem 0.25rem 0.5rem rgba(0, 0, 0, 0.25);
+    margin: 20px;
+    /* Adds margin to each card */
+  }
+  
+  :root {
+  
+    /* Colors */
+    --brand-color: #fd2600;
+    --black: hsl(0, 0%, 0%);
+    --white: hsl(0, 0%, 100%);
+    /* Fonts */
+    --font-title: "Montserrat", sans-serif;
+    --font-text: "Lato", sans-serif;
+  }
+  
+  /* RESET */
+  
+  /* Box sizing rules */
+  *,
+  *::before,
+  *::after {
+    box-sizing: border-box;
+  
+  }
+  
+  /* Remove default margin */
+  
+  h2,
+  p {
+    margin: 0;
+  }
+  
+  
+  
+  h2 {
+    font-size: 2.25rem;
+    font-family: var(--font-title);
+    color: var(--white);
+    line-height: 1.1;
+  }
+  
+  p {
+    font-family: var(--font-text);
+    font-size: 1rem;
+    line-height: 1.5;
+    color: var(--white);
+  }
+  
+  .flow>*+* {
+    margin-top: var(--flow-space, 1em);
+  }
+  
+  /* CARD COMPONENT */
+  
+  
+  
+  .card>* {
+    grid-column: 1 / 2;
+    grid-row: 1 / 2;
+  }
+  
+  .card__background {
+    object-fit: cover;
+    max-width: 100%;
+    height: 100%;
+  }
+  
+  .card__content {
+    --flow-space: 0.9375rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-self: flex-end;
+    height: 55%;
+    padding: 12% 1.25rem 1.875rem;
+    background: linear-gradient(180deg,
+        hsla(0, 0%, 0%, 0) 0%,
+        hsla(0, 0%, 0%, 0.3) 10%,
+        hsl(0, 0%, 0%) 100%);
+  }
+  
+  .card__content--container {
+    --flow-space: 1.25rem;
+  }
+  
+  .card__title {
+    position: relative;
+    width: fit-content;
+    width: -moz-fit-content;
+    /* Prefijo necesario para Firefox  */
+  }
+  
+  .card__title::after {
+    content: "";
+    position: absolute;
+    height: 0.3125rem;
+    width: calc(100% + 1.25rem);
+    bottom: calc((1.25rem - 0.5rem) * -1);
+    left: -1.25rem;
+    background-color: var(--brand-color);
+  }
+  
+  .card__button {
+    padding: 0.75em 1.6em;
+    width: fit-content;
+    width: -moz-fit-content;
+    /* Prefijo necesario para Firefox  */
+    font-variant: small-caps;
+    font-weight: bold;
+    border-radius: 0.45em;
+    border: none;
+    background-color: var(--brand-color);
+    font-family: var(--font-title);
+    font-size: 1.125rem;
+    color: var(--black);
+  }
+  
+  .card__button:focus {
+    outline: 2px solid black;
+    outline-offset: -5px;
+  }
+  
+  @media (any-hover: hover) and (any-pointer: fine) {
+    .card__content {
+      transform: translateY(62%);
+      transition: transform 500ms ease-out;
+      transition-delay: 500ms;
+    }
+  
+    .card__title::after {
+      opacity: 0;
+      transform: scaleX(0);
+      transition: opacity 1000ms ease-in, transform 500ms ease-out;
+      transition-delay: 500ms;
+      transform-origin: right;
+    }
+  
+    .card__background {
+      transition: transform 500ms ease-in;
+    }
+  
+    .card__content--container> :not(.card__title),
+    .card__button {
+      opacity: 0;
+      transition: transform 500ms ease-out, opacity 500ms ease-out;
+    }
+  
+    .card:hover,
+    .card:focus-within {
+      transform: scale(1.05);
+      transition: transform 500ms ease-in;
+    }
+  
+    .card:hover .card__content,
+    .card:focus-within .card__content {
+      transform: translateY(0);
+      transition: transform 500ms ease-in;
+    }
+  
+    .card:focus-within .card__content {
+      transition-duration: 0ms;
+    }
+  
+    .card:hover .card__background,
+    .card:focus-within .card__background {
+      transform: scale(1.3);
+    }
+  
+    .card:hover .card__content--container> :not(.card__title),
+    .card:hover .card__button,
+    .card:focus-within .card__content--container> :not(.card__title),
+    .card:focus-within .card__button {
+      opacity: 1;
+      transition: opacity 500ms ease-in;
+      transition-delay: 1000ms;
+    }
+  
+    .card:hover .card__title::after,
+    .card:focus-within .card__title::after {
+      opacity: 1;
+      transform: scaleX(1);
+      transform-origin: left;
+      transition: opacity 500ms ease-in, transform 500ms ease-in;
+      transition-delay: 500ms;
+    }
+  }
+  
+  .header {
+    text-align: center;
+    padding: 32px;
+  }
+  
+  .row {
+    display: -ms-flexbox;
+    /* IE10 */
+    display: flex;
+    -ms-flex-wrap: wrap;
+    /* IE10 */
+    flex-wrap: wrap;
+    padding: 0 4px;
+  }
+  
+  /* Create four equal columns that sits next to each other */
+  .column {
+    -ms-flex: 25%;
+    /* IE10 */
+    flex: 25%;
+    max-width: 25%;
+    padding: 0 4px;
+  }
+  
+  .column-1 {
+    margin-top: -110px;
+    width: 25%;
+  }
+  
+  .column-2 {
+    margin-top: -120px;
+    width: 25%;
+    margin-left: 343px;
+  }
+  
+  .column img {
+    margin-top: 8px;
+    vertical-align: middle;
+    width: 100%;
+  }
+  
+  /* Responsive layout - makes a two column-layout instead of four columns */
+  @media screen and (max-width: 800px) {
+    .column {
+      -ms-flex: 50%;
+      flex: 50%;
+      max-width: 50%;
+    }
+  }
+  
+  /* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+  @media screen and (max-width: 600px) {
+    .column {
+      -ms-flex: 100%;
+      flex: 100%;
+      max-width: 100%;
+    }
+  }
+  
+  .tadoba-container {
+    background-color: #bebdbd59;
+    height: 90vh;
+    margin-bottom: 90px;
+  }
+  
+  .head-tadoba {
+    color: black;
+    font-size: 25px;
+    font-family: 'Poppins', sans-serif;
+    margin-top: 20px;
+    font-weight: bold;
+    padding: 40px 50px;
+  }
+  
+  .tadoba-content {
+    color: #000;
+    font-family: 'Roboto', sans-serif;
+    font-size: 20px;
+    padding: 0px 50px;
+    text-align: justify;
+    -moz-text-align-last: justify;
+    /* For Firefox prior 58.0 */
+    text-align-last: justify;
+    margin-right: 50%;
+  }
+  
+  .img-tadoba {
+    float: right;
+    margin-top: -300px;
+    margin-right: 100px;
+    width: 30%;
+  }
+  
+  .img-tadoba-2 {
+    margin-top: -90px;
+    margin-left: 55%;
+  
+  }
+  
+  .img-tadoba-3 {
+    float: right;
+    margin-top: -90px;
+    margin-right: 50px;
+  }
+  
+  
+  /* Slideshow container */
+  .slideshow-container {
+    width: 80%;
+    height: 70vh;
+    position: relative;
+    margin: auto;
+    margin-top: 40px;
+  
+  }
+  
+  /* Hide the images by default */
+  .mySlides {
+    display: none;
+  }
+  
+  /* Next & previous buttons */
+  .prev,
+  .next {
+    cursor: pointer;
+    position: absolute;
+    width: auto;
+    margin-top: -300px;
+    padding: 50px;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+  }
+  
+  /* Position the "next button" to the right */
+  .next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+  }
+  
+  
+  
+  
+  
+  .text {
+    display: flex;
+    justify-content: space-around;
+  }
+  
+  .card-container-s {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 20px 40px;
+  }
+  
+  .card-container-s-2 {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 20px 40px;
+  }
+  
+  .card-container-s-3 {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 20px 40px;
+  }
+  
+  .card-s {
+    border: 1px solid black;
+    width: 30%;
+    height: 60vh;
+    margin: 23px 30px;
+    margin-top: 40px;
+    cursor: pointer;
+    background-color: #e0dddd2c;
+    transition: transform 0.3s ease-in-out, background-color 0.3s ease-in-out;
+  }
+  
+  .card-s:hover {
+    background-color: #fd2c08a9;
+    color: #ffffff;
+    transform: scale(1.05);
+  }
+  
+  @keyframes fadeInUp {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+  
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  .card-s {
+    animation: fadeInUp 0.6s ease-in-out;
+  }
+  
+  .user-s {
+    width: 40%;
+    margin: 20px 83px;
+    border-radius: 50%;
+  }
+  
+  .card-s h1 {
+    text-align: center;
+    font-size: 25px;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    margin-top: -10px;
+  }
+  
+  .card-s h3 {
+    text-align: center;
+    font-size: 16px;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  }
+  
+  .card-s p {
+    text-align: center;
+    font-family: 'Roboto', sans-serif;
+    text-align: justify;
+    -moz-text-align-last: justify;
+    text-align-last: justify;
+    color: #000;
+    font-size: 15px;
+    padding: 15px 23px;
+  }
+  
+  
+  
+  
+  /* The dots/bullets/indicators */
+  .dot {
+    cursor: pointer;
+    height: 15px;
+    width: 15px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+  }
+  
+  .active,
+  .dot:hover {
+    background-color: #717171;
+  }
+  
+  /* Fading animation */
+  .fade {
+    animation-name: fade;
+    animation-duration: 1.5s;
+  }
+  
+  @keyframes fade {
+    from {
+      opacity: .4
+    }
+  
+    to {
+      opacity: 1
+    }
+  }
+  
+  .background {
+    background-color: #c2bcbc4d;
+  
+    display: block;
+    width: 100%;
+    height: 1000px;
+    position: absolute;
+    z-index: 0;
+    top: 0;
+    left: 0;
+  }
+  
+  .background-texture {
+    background: -webkit-gradient(linear,
+        left bottom,
+        left top,
+        from(#0f0140e6),
+        to(rgba(255, 214, 117, 0.9)));
+    background: linear-gradient(to top, #0f0140e6, rgba(255, 214, 117, 0.9));
+    background-size: cover;
+    width: 100%;
+    height: 1000px;
+    position: absolute;
+    z-index: 0;
+    top: 0;
+    left: 0;
+  }
+  
+  .heading-1 {
+    text-align: center;
+    font-size: 50px;
+    margin: 20px;
+    margin-top: 60px;
+    margin-bottom: -90px;
+  }
+  
+  .carousel {
+    width: 100%;
+    overflow-x: scroll;
+    padding: 30px;
+    padding-top: 80px;
+    position: relative;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+  }
+  
+  .carousel__container {
+    white-space: nowrap;
+    margin: 70px 0px;
+    padding-bottom: 10px;
+    display: inline-block;
+  }
+  
+  .categories__title {
+    color: rgb(77, 55, 102);
+    font-size: 28px;
+    position: absolute;
+    padding-left: 30px;
+  }
+  
+  .carousel-item {
+    width: 200px;
+    height: 250px;
+    border-radius: 20px;
+    background-color: #95bcd6;
+    overflow: hidden;
+    margin-right: 10px;
+    margin-top: 70px;
+    display: inline-block;
+    cursor: pointer;
+    -webkit-transition: 1000ms all;
+    transition: 1000ms all;
+    -webkit-transform-origin: center left;
+    transform-origin: center left;
+    position: relative;
+  }
+  
+  .carousel-item:hover~.carousel-item {
+    -webkit-transform: translate3d(100px, 0, 0);
+    transform: translate3d(100px, 0, 0);
+  }
+  
+  .carousel__container:hover .carousel-item {
+    opacity: 0.3;
+  }
+  
+  .carousel__container:hover .carousel-item:hover {
+    -webkit-transform: scale(1.5);
+    transform: scale(1.5);
+    opacity: 1;
+  }
+  
+  .carousel-item__img {
+    width: 200px;
+    height: 250px;
+    -o-object-fit: cover;
+    object-fit: cover;
+  }
+  
+  .carousel-item__details {
+    background: -webkit-gradient(linear,
+        left bottom,
+        left top,
+        from(rgba(0, 0, 0, 0.9)),
+        to(rgba(0, 0, 0, 0)));
+    background: linear-gradient(to top,
+        rgba(0, 0, 0, 0.9) 0%,
+        rgba(0, 0, 0, 0) 100%);
+    font-size: 10px;
+    opacity: 0;
+    -webkit-transition: 450ms opacity;
+    transition: 450ms opacity;
+    padding: 10px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+  }
+  
+  .carousel-item__details:hover {
+    opacity: 1;
+  }
+  
+  .carousel-item__details span {
+    /* width: 10px;
+    height: 10px; */
+    font-size: 0.9rem;
+    color: #2ecc71;
+    /* background-color: white; */
+  }
+  
+  .carousel-item__details .controls {
+    padding-top: 180px;
+  }
+  
+  .carousel-item__details .carousel-item__details--title,
+  .carousel-item__details--subtitle {
+    color: #fff;
+    margin: 5px 0;
+  }
+  
+  .abt-img {
+    width: 60%;
+    height: 70vh;
+    padding: 20px 70px;
+    float: right;
+    position: relative;
+  }
+  
+  .text-box {
+    background-color: #b6aeae50;
+    width: 54%;
+    height: 58vh;
+    margin-top: 7%;
+    position: absolute;
+  }
+  .text-box p{
+    text-align: center;
+    font-family: 'Roboto', sans-serif;
+    text-align: justify;
+    -moz-text-align-last: justify;
+    text-align-last: justify;
+    color: #000;
+    font-size: 15px;
+    padding: 50px 50px;
+  }
+  .abt-container {
+    margin: 40px;
+    
+  }
+  .abt-container h1{
+    font-size: 50px;
+    margin-left: 7%;
+  }
+  .footer {
+  position: relative;
+  padding: 80px 20px 20px;
+  background-color: #ff6347;
+  color: black;
+  overflow: hidden;
+  font-family: 'Arial', sans-serif;
+  z-index: 1;
+}
+
+/* Footer Styling */
+.footer {
+  position: relative;
+  padding: 100px 20px 20px;
+  background-color: #ff6347;
+  color: black;
+  overflow: hidden;
+  font-family: 'Arial', sans-serif;
+  z-index: 1;
+}
+
+/* Footer Content */
+.footer-content {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: flex-start;
+  z-index: 2;
+}
+
+.footer-section {
+  flex: 1 1 calc(25% - 20px);
+  margin: 10px;
+}
+
+.footer-section h3 {
+  font-size: 24px;
+  margin-bottom: 15px;
+}
+
+.footer-section p {
+  font-size: 16px;
+  margin-bottom: 10px;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+ul:hover{
+  color: white;
+}
+
+ul li {
+  margin: 8px 0;
+}
+
+ul li:hover{
+  color: white;
+}
+
+ul li a {
+  color: black;
+  text-decoration: none;
+  font-size: 16px;
+  transition: color 0.3s ease;
+}
+
+ul li a:hover {
+  color: #ffffff;
+}
+
+/* Social Media Icons */
+.social-icons {
+  display: flex;
+  gap: 15px;
+}
+
+.social-icon {
+  text-decoration: none;
+  color: black;
+  font-size: 20px;
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.social-icon:hover {
+  transform: scale(1.2);
+  color: white;
+}
+
+/* Subscribe Section */
+.footer-subscribe {
+  flex: 1 1 100%;
+  text-align: center;
+  margin-top: 20px;
+}
+
+.footer-subscribe input {
+  padding: 12px 25px;
+  margin-top: 10px;
+  border-radius: 5px;
+  border: none;
+  outline: none;
+  width: 250px;
+}
+
+.footer-subscribe button {
+  margin-top: 10px;
+  padding: 12px 25px;
+  background-color: black;
   color: #ff6347;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.3s ease;
 }
 
-.content {
-  padding: 16px;
+.footer-subscribe button:hover {
+  background-color: #ffffff;
+  color: black;
+}
+
+/* Wave Animations */
+.footer-waves {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 200px;
+  z-index: 0;
+  overflow: hidden;
+}
+
+.footer-waves::before,
+.footer-waves::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  width: 150%;
+  height: 100px;
+  background-color: #fd8b77;
+  border-radius: 50%;
+  animation: wave-animation 8s infinite ease-in-out;
+}
+
+.footer-waves::before {
+  animation-delay: -3s;
+  opacity: 0.7;
+}
+
+.footer-waves::after {
+  animation-delay: -6s;
+  opacity: 0.5;
+}
+
+@keyframes wave-animation {
+  0%, 100% {
+    transform: translateX(0) translateY(0);
+  }
+  50% {
+    transform: translateX(-25%) translateY(15px);
+  }
+}
+
+/* Footer Bottom Bar */
+.footer-bottom {
+  text-align: center;
+  margin-top: 20px;
+  font-size: 14px;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+/* Hover Effects for All Links */
+.footer-content a {
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.footer-content a:hover {
+  color: #ff6347;
+  transform: scale(1.1);
 }
 
   </style>
 </head>
+
 <body>
-  <div id="navbar">
-    <a href="#">Home</a>
-    <a href="#">Explore</a>
-    <a href="#">About</a>
-    <a href="#">Contact</a>
-    <a href="#">Reviews</a>
-    <a href="#">Liked Places</a>
-    <a href="#">Login</a>
+  <nav class="navbar">
+    <div class="logo">
+      <img src="./Images/Map_and_Plane_Logo-removebg-preview.png" alt="Tech Innovators Logo" />
+      <h2>ODYSSEY</h2>
+    </div>
+    <ul class="nav-links">
+      <li><a href="./index.html">Home</a></li>
+      <li><a href="./Pages/Explore.html">Explore</a></li>
+      <li><a href="./Pages/About.html">About</a></li>
+      <li><a href="./Pages/Contact.html">Contact</a></li>
+      <li><a href="./Pages/Login.html">Login</a></li>
+      <li><a href="./Pages/Review.html">Reviews</a></li>
+      <li><a href="./Pages/To-do list.html">To-Go List</a></li>
+      <li><a href="./Pages/">Liked Places</a></li>
 
-  
+    </ul>
+  </nav>
+  <video width="100%" autoplay muted loop id="mountain">
+    <source src="./Images/home_video.mp4" type="video/mp4">
+  </video>
+
+  <!-- <h1 class="video-title">Lifelong memories just a <br>
+    few seconds away</h1>-->
+
+
+  <div class="wrapper">
+    <a class="w-text" href="#">Lifelong memories just a<br>
+      few seconds away
+    </a>
   </div>
- <div class="head-container">
-  <img class="head-img" src="./Images/beautiful-tropical-beach-sea.jpg">
-  <div class="head-container2">
-    <h1>EXPLORE</h1>
-    <p>your amazing city</p>
-    <p class="content-1">Find great places to stay, eat, shop, or visit from local experts<br>
-      Or browse the highlights
+
+  <p class="video-title-2">Let's start your journey with us, your dream will come true</p>
+
+  <h1 class="heading">We Provide Top Destinations</h1>
+
+
+
+  <div class="card-container">
+    <article class="card">
+      <img class="card__background" src="./images/beach2.jpeg" alt="" width="1920" height="2193" />
+      <div class="card__content | flow">
+        <div class="card__content--container | flow">
+          <h2 class="card__title">Beaches</h2>
+          <p class="card__description">
+            Beaches are coastal areas where land meets the sea, characterized by sandy shores and the rhythmic sound of
+            waves.
+          </p>
+        </div>
+
+      </div>
+    </article>
+
+    <article class="card">
+      <img class="card__background" src="./images/caves.jpeg" alt="" width="1920" height="2193" />
+      <div class="card__content | flow">
+        <div class="card__content--container | flow">
+          <h2 class="card__title">Caves</h2>
+          <p class="card__description">
+            Caves are natural underground spaces, often formed over thousands of years through geological processes.
+          </p>
+        </div>
+
+      </div>
+    </article>
+
+
+
+    <article class="card">
+      <img class="card__background" src="./images/fort.jpeg"
+        alt="Photo of Cartagena's cathedral at the background and some colonial style houses" width="1920"
+        height="2193" />
+      <div class="card__content | flow">
+        <div class="card__content--container | flow">
+          <h2 class="card__title">Forts</h2>
+          <p class="card__description">
+            Forts are historical structures built for defense and strategic purposes. They often stand as symbols of a
+            region’s heritage and valor.
+          </p>
+        </div>
+
+      </div>
+    </article>
+  </div>
+
+  <div class="card-container">
+    <article class="card">
+      <img class="card__background" src="./images/view-mountain-with-dreamy-aesthetic.jpg"
+        alt="Photo of Cartagena's cathedral at the background and some colonial style houses" width="1920"
+        height="2193" />
+      <div class="card__content | flow">
+        <div class="card__content--container | flow">
+          <h2 class="card__title">Hill Stations</h2>
+          <p class="card__description">
+            Hill stations are elevated areas with cooler climates, often nestled in the mountains. They provide a
+            refreshing escape from the heat and bustle of city life.
+          </p>
+        </div>
+
+      </div>
+    </article>
+
+    <article class="card">
+      <img class="card__background" src="./images/temple.jpeg"
+        alt="Photo of Cartagena's cathedral at the background and some colonial style houses" width="1920"
+        height="2193" />
+      <div class="card__content | flow">
+        <div class="card__content--container | flow">
+          <h2 class="card__title">Temple</h2>
+          <p class="card__description">
+            Temples are sacred places of worship, often featuring intricate architecture and rich history. They serve as
+            spiritual centers where devotees gather for prayer and rituals.
+          </p>
+        </div>
+
+      </div>
+    </article>
+
+    <article class="card">
+      <img class="card__background" src="./images/waterfaal.jpeg"
+        alt="Photo of Cartagena's cathedral at the background and some colonial style houses" width="1920"
+        height="2193" />
+      <div class="card__content | flow">
+        <div class="card__content--container | flow">
+          <h2 class="card__title">Waterfall</h2>
+          <p class="card__description">
+            Waterfalls are nature’s spectacular displays of power and beauty, where water cascades over a vertical drop,
+            creating a mesmerizing sight and soothing sound.
+          </p>
+        </div>
+
+      </div>
+    </article>
+  </div>
+  <div class="tadoba-container">
+
+    <p class="head-tadoba">Today's Special: Explore Tadoba Jungle Safari with Us!</p>
+
+    <p class="tadoba-content">Are you ready for a thrilling adventure into the heart of the wild?
+      Join us today for an unforgettable safari experience at
+      Tadoba Andhari Tiger Reserve, one of the most stunning
+      and diverse wildlife sanctuaries in India!
+      Here’s why you shouldn’t miss out:
+      <br><br>
+      Tadoba is calling, and there’s no better time than now to experience its wildlife. Don’t miss out on this
+      once-in-a-lifetime adventure. Explore the dense forests, hear the sounds of the jungle, and maybe even spot a
+      majestic tiger up close.
     </p>
+  
+    <img class="img-tadoba" src="./images/tadoba-2.jpg">
+    <img class="img-tadoba-2" src="./images/tadoba-1.jpg">
+    <img class="img-tadoba-3" src="./images/tadoba-3.jpg">
+    
   </div>
+
+  <h1 class="heading">Our Clients Say!!!</h1>
+
+
+
+  <div class="slideshow-container">
+
+
+    <div class="mySlides fade">
+      <div class="card-container-s">
+
+        <div class="card-s">
+          <img class="user-s" src="./images/user3.jpg">
+          <h1>Jhon Deo</h1>
+          <h3>Pune, Maharashtra</h3>
+          <p>"This place is a must-visit for anyone looking for breathtaking scenery, rich culture, and unforgettable
+            experiences - truly a hidden gem that offers something for everyone!". </p>
+        </div>
+
+        <div class="card-s">
+          <img class="user-s" src="./images/user3.jpg">
+          <h1>Jhon Deo</h1>
+          <h3>Pune, Maharashtra</h3>
+          <p>"This place is a must-visit for anyone looking for breathtaking scenery, rich culture, and unforgettable
+            experiences - truly a hidden gem that offers something for everyone!". </p>
+        </div>
+
+        <div class="card-s">
+          <img class="user-s" src="./images/user3.jpg">
+          <h1>Jhon Deo</h1>
+          <h3>Pune, Maharashtra</h3>
+          <p>"This place is a must-visit for anyone looking for breathtaking scenery, rich culture, and unforgettable
+            experiences - truly a hidden gem that offers something for everyone!". </p>
+        </div>
+      </div>
+    </div>
+
+
+    <div class="mySlides fade">
+      <div class="card-container-s-2">
+
+        <div class="card-s">
+          <img class="user-s" src="./images/user3.jpg">
+          <h1>Jhon Deo</h1>
+          <h3>Pune, Maharashtra</h3>
+          <p>"This place is a must-visit for anyone looking for breathtaking scenery, rich culture, and unforgettable
+            experiences - truly a hidden gem that offers something for everyone!". </p>
+        </div>
+
+        <div class="card-s">
+          <img class="user-s" src="./images/user3.jpg">
+          <h1>Jhon Deo</h1>
+          <h3>Pune, Maharashtra</h3>
+          <p>"This place is a must-visit for anyone looking for breathtaking scenery, rich culture, and unforgettable
+            experiences - truly a hidden gem that offers something for everyone!". </p>
+        </div>
+
+        <div class="card-s">
+          <img class="user-s" src="./images/user3.jpg">
+          <h1>Jhon Deo</h1>
+          <h3>Pune, Maharashtra</h3>
+          <p>"This place is a must-visit for anyone looking for breathtaking scenery, rich culture, and unforgettable
+            experiences - truly a hidden gem that offers something for everyone!". </p>
+        </div>
+      </div>
+    </div>
+
+    <div class="mySlides fade">
+      <div class="card-container-s-3">
+
+        <div class="card-s">
+          <img class="user-s" src="./images/user3.jpg">
+          <h1>Jhon Deo</h1>
+          <h3>Pune, Maharashtra</h3>
+          <p>"This place is a must-visit for anyone looking for breathtaking scenery, rich culture, and unforgettable
+            experiences - truly a hidden gem that offers something for everyone!". </p>
+        </div>
+
+        <div class="card-s">
+          <img class="user-s" src="./images/user3.jpg">
+          <h1>Jhon Deo</h1>
+          <h3>Pune, Maharashtra</h3>
+          <p>"This place is a must-visit for anyone looking for breathtaking scenery, rich culture, and unforgettable
+            experiences - truly a hidden gem that offers something for everyone!". </p>
+        </div>
+
+        <div class="card-s">
+          <img class="user-s" src="./images/user3.jpg">
+          <h1>Jhon Deo</h1>
+          <h3>Pune, Maharashtra</h3>
+          <p>"This place is a must-visit for anyone looking for breathtaking scenery, rich culture, and unforgettable
+            experiences - truly a hidden gem that offers something for everyone!". </p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+ <br>
+ <br>
+
+  <div style="text-align:center">
+    <span class="dot" onclick="currentSlide(1)"></span>
+    <span class="dot" onclick="currentSlide(2)"></span>
+    <span class="dot" onclick="currentSlide(3)"></span>
+  </div>
+
+
+
+
+  <div class="abt-container">
+    <img class="abt-img" src="./images/abt-img.jpg">
+    <h1>About us</h1>
+    <div class="text-box">
+      <p>ODYSSEY is a comprehensive travel website dedicated to exploring the diverse and vibrant state of Maharashtra.
+        From the serene beaches of the Konkan coast to the majestic forts of the Sahyadri range, ODYSSEY serves as your
+        trusted companion for discovering hidden gems, popular attractions, and cultural landmarks across the region.
+        Whether you're a nature lover, history enthusiast, or adventure seeker, ODYSSEY offers curated travel guides,
+        personalized itineraries, and practical tips to make your journey unforgettable. Why the Name "ODYSSEY"? The
+        name "ODYSSEY" reflects the spirit of an epic journey filled with discovery, adventure, and transformation. Just
+        as Odysseus navigated through challenges and wonders in Homer’s classic tale, we aim to guide travelers through
+        the rich landscapes, heritage, and traditions of Maharashtra, ensuring every trip becomes an extraordinary
+        adventure. With ODYSSEY, we are here to inspire, guide, and support you on your journey, ensuring every moment
+        in Maharashtra is filled with awe and wonder. Let us be your partner in creating memories that last a lifetime!
+      </p>
+    </div>
+  </div>
+
+
+
+
+
+
+
  
- </div>
+<div class="">
 
- <div class="card-c"></div>
-
-  <!--<div class="slider">
-    <div class="slide" style="background-image: url('./Images/beautiful-waterfall-landscape.jpg');">
-      <div class="slide-content">
-        <h1>Discover New Horizons</h1>
-        <p>Explore the possibilities</p>
-        <a href="./Pages/Explore.html" class="cta-button">Learn More</a>
-      </div>
-    </div>
-    <div class="slide" style="background-image: url('./Images/view-mountain-with-dreamy-aesthetic.jpg');">
-      <div class="slide-content">
-        <h1>Discover New Horizons</h1>
-        <p>Explore the possibilities</p>
-        <a href="./Pages/Explore.html" class="cta-button">Learn More</a>
-      </div>
-    </div>
-    <div class="slide" style="background-image: url('./Images/view-castle-with-nature-landscape.jpg');">
-      <div class="slide-content">
-        <h1>Discover New Horizons</h1>
-        <p>Explore the possibilities</p>
-        <a href="./Pages/Explore.html" class="cta-button">Learn More</a>
-      </div>
-    </div>
-    <div class="slide" style="background-image: url('./Images/pexels-igor-meghega-315695093-15211387.jpg');">
-        <div class="slide-content">
-          <h1>Discover New Horizons</h1>
-          <p>Explore the possibilities</p>
-          <a href="./Pages/Explore.html" class="cta-button">Learn More</a>
+  <section class="carousel">
+    <h1 class="heading-1">Our Gallery</h1>
+    <div class="carousel__container">
+      <div class="carousel-item">
+        <img
+          class="carousel-item__img"
+          src="./images/caves.jpeg"
+          alt="people"
+        />
+        <div class="carousel-item__details">
+          <div class="controls">
+            <span class="fas fa-play-circle"></span>
+            <span class="fas fa-plus-circle"></span>
+          </div>
+         
         </div>
       </div>
-      <div class="slide" style="background-image: url('./Images/pexels-krea-364775763-29655565.jpg');">
-        <div class="slide-content">
-          <h1>Discover New Horizons</h1>
-          <p>Explore the possibilities</p>
-          <a href="./Pages/Explore.html" class="cta-button">Learn More</a>
+      <div class="carousel-item">
+        <img
+          class="carousel-item__img"
+          src="./images/waterfaal.jpeg"
+          alt="people"
+        />
+        <div class="carousel-item__details">
+          <div class="controls">
+            <span class="fas fa-play-circle"></span>
+            <span class="fas fa-plus-circle"></span>
+          </div>
+         
         </div>
       </div>
-  </div>-->
+      <div class="carousel-item">
+        <img
+          class="carousel-item__img"
+          src="./images/temple.jpeg"
+          alt="people"
+        />
+        <div class="carousel-item__details">
+          <div class="controls">
+            <span class="fas fa-play-circle"></span>
+            <span class="fas fa-plus-circle"></span>
+          </div>
+          
+        </div>
+      </div>
+      <div class="carousel-item">
+        <img
+          class="carousel-item__img"
+          src="./images/caves-n.jpg"
+          alt="people"
+        />
+        <div class="carousel-item__details">
+          <div class="controls">
+            <span class="fas fa-play-circle"></span>
+            <span class="fas fa-plus-circle"></span>
+          </div>
+      
+        </div>
+      </div>
+      <div class="carousel-item">
+        <img
+          class="carousel-item__img"
+          src="./images/gallery.jpg"
+          alt="people"
+        />
+        <div class="carousel-item__details">
+          <div class="controls">
+            <span class="fas fa-play-circle"></span>
+            <span class="fas fa-plus-circle"></span>
+          </div>
+          
+        </div>
+      </div>
+      <div class="carousel-item">
+        <img
+          class="carousel-item__img"
+          src="./images/gallery2.jpg"
+          alt="people"
+        />
+        <div class="carousel-item__details">
+          <div class="controls">
+            <span class="fas fa-play-circle"></span>
+            <span class="fas fa-plus-circle"></span>
+          </div>
+          
+        </div>
+      </div>
 
-<!--<footer class="footer">
+      <div class="carousel-item">
+        <img
+          class="carousel-item__img"
+          src="./images/Fort3.jpg"
+          alt="people"
+        />
+        <div class="carousel-item__details">
+          <div class="controls">
+            <span class="fas fa-play-circle"></span>
+            <span class="fas fa-plus-circle"></span>
+          </div>
+          
+        </div>
+      </div>
+    </div>
+  </section>
+ 
+</div>
+
+
+
+
+
+
+
+
+
+
+ <footer class="footer">
   <div class="footer-waves"></div>
 
   <div class="footer-content">
@@ -149,8 +1453,9 @@
   <div class="footer-bottom">
       <p>&copy; 2024 TravelWebsite. All rights reserved. Designed with passion for travel lovers.</p>
   </div>
-</footer>-->
+</footer>
 
   <script src="./JS/index.js"></script>
 </body>
+
 </html>
