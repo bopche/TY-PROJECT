@@ -1,8 +1,7 @@
 body {
     margin: 0;
     min-width: 250px;
-    background-image: url(https://img.freepik.com/free-photo/flat-lay-hat-notebook-arrangement_23-2148786126.jpg?size=626&ext=jpg&ga=GA1.1.2008272138.1727654400&semt=ais_hybrid);
-    background-repeat: no-repeat;
+    background-image: url(../Images/abt.jpg);
     background-position: center;
     background-size: cover;
     background-attachment: fixed;
@@ -129,3 +128,4 @@ body {
   .addBtn:hover {
     background-color:#f4e6de;
   }
+  
