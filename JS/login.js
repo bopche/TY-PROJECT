@@ -1,26 +1,34 @@
-const links = document.querySelectorAll(".link");
-const forms = document.querySelector(".forms");
-const showHide = document.querySelectorAll(".hide-show");
+document.getElementById('loginForm')?.addEventListener('submit', function(event) {
+    event.preventDefault();
+    const username = document.getElementById('login-username').value;
+    const password = document.getElementById('login-password').value;
 
-showHide.forEach(showicon=>{
-    showicon.addEventListener("click", ()=>{
-        let field_password = showicon.parentElement.parentElement.querySelectorAll(".password");
+    if (username === '' || password === '') {
+        alert('Please fill in all fields.');
+    } else {
+        alert('Login successful!');
+    }
+});
 
-        field_password.forEach(password=>{
-            if(password.type === 'password'){
-                password.type = 'text';
-                showHide.classList.replace("bx-hide", "bx-show");
-            }
-            password.type = "password";
-            showHide.classList.replace("bx-show", "bx-hide");
-        })
-    })
-})
+document.getElementById('registerForm')?.addEventListener('submit', function(event) {
+    event.preventDefault();
+    const username = document.getElementById('register-username').value;
+    const email = document.getElementById('register-email').value;
+    const password = document.getElementById('register-password').value;
 
+    if (username === '' || email === '' || password === '') {
+        alert('Please fill in all fields.');
+    } else {
+        alert('Registration successful!');
+    }
+});
 
-links.forEach(link =>{
-    link.addEventListener("click", e=>{
-        e.preventDefault();
-        forms.classList.toggle("Show-Signup");
-    })
-})
+// Show/Hide Password
+function togglePassword(id) {
+    const passwordField = document.getElementById(id);
+    if (passwordField.type === 'password') {
+        passwordField.type = 'text';
+    } else {
+        passwordField.type = 'password';
+    }
+}
