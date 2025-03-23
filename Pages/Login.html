@@ -4,23 +4,29 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login</title>
-    <link rel="stylesheet" href="/CSS/login.css">
+    <link rel="stylesheet" href="/CSS/Register.css">
     <script src="/JS/login.js" defer></script>
 </head>
 <body>
+    <body style="background: url('/Images/registerbg.jpeg') no-repeat center center/cover; height: 100vh; display: flex; justify-content: center; align-items: center; font-family: Arial, sans-serif;">
+
 
 <div class="container">
     <div class="form-box">
         <h2>Login</h2>
-        <form id="loginForm">
+        <form id="registerForm">
             <div class="input-box">
-                <input type="text" id="login-username" required>
+                <input type="text" id="register-username" required>
                 <label>Username</label>
             </div>
             <div class="input-box">
-                <input type="password" id="login-password" required>
+                <input type="email" id="register-email" required>
+                <label>Email</label>
+            </div>
+            <div class="input-box">
+                <input type="password" id="register-password" required>
                 <label>Password</label>
-                <span class="toggle-password" onclick="togglePassword('login-password')">👁</span>
+                <span class="toggle-password" onclick="togglePassword('register-password')">👁</span>
             </div>
             <div class="remember-forgot">
                 <label><input type="checkbox" id="rememberMe"> Remember me</label>
