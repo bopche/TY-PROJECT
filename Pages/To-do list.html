@@ -4,6 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>ODYSSEY</title>
+  <link rel="stylesheet" href="../CSS/Explore.css">
   <link rel="stylesheet" href="../CSS/To-do list.css">
 </head>
 <body>
@@ -25,6 +26,43 @@
 
     </ul>
   </nav>
+
+  <div id="particles-container"></div> <!-- Background Effect -->
+
+ 
+  <div class="todo-wrapper">
+    <h1 class="main-heading">📍 My To-Go List</h1>
+    <p class="description-text">Plan your future adventures with ODYSSEY!</p>
+
+    <!-- Destination Selection -->
+    <div class="input-area">
+        <select id="destinationSelect" class="dropdown">
+            <option value="" disabled selected>Select a Destination...</option>
+            <option>Ajanta Caves</option>
+            <option>Ellora Caves</option>
+            <option>Gateway of India</option>
+            <option>Tadoba National Park</option>
+            <option>Mahabaleshwar</option>
+            <option>Matheran</option>
+            <option>Seven Sisters Hills</option>
+            <option>Bhandardara</option>
+            <option>Khandala</option>
+            <option>Amboli Waterfalls</option>
+            <option>Muktai Waterfalls</option>
+            <option>Zenith Waterfalls</option>
+            <option>Rajgad Fort</option>
+            <option>Torna Fort</option>
+            <option>Sinhgad Fort</option>
+            <option>Visapur Fort</option>
+            <option>Purandar Fort</option>
+        </select>
+        <button class="add-btn" onclick="addDestination()">Add</button>
+    </div>
+
+    <!-- To-Go List (Accordion Style) -->
+    <div id="toGoList" class="accordion"></div>
+
+</div>
 
   <footer class="footer">
     <div class="footer-waves"></div>
@@ -84,7 +122,10 @@
         navBar.classList.toggle("active");
     }
 </script>
-<script src="../JS/Expore.js"></script> 
+<script src="/JS/particles.js"></script> 
+<script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+  <script src="/JS/togolist.js"></script>
+  
 
 </body>
 </html>  

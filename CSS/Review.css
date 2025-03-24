@@ -197,6 +197,7 @@ h1 {
   .footer {
     position: relative;
     padding: 100px 20px 20px;
+    width: 100%;
     background-color: #ff6347;
     color: black;
     overflow: hidden;
