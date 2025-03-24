@@ -5,50 +5,58 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Book Now</title>
     <link rel="stylesheet" href="../CSS/Booknow.css">
+    <script>
+        function submitForm(event) {
+            event.preventDefault(); // Prevent actual form submission
+            alert("Thank you for your information! We will get back to you soon.");
+            document.getElementById("booking-form").reset(); // Optional: Clear the form after submission
+        }
+    </script>
 </head>
 <body>
     <div class="booking-card">
         <h2>Book Your Destination</h2>
         <p>Fill in your details and select your dream destination!</p>
-        <form>
+        <form id="booking-form" onsubmit="submitForm(event)">
             <div class="form-group">
                 <label for="name">Full Name</label>
-                <input type="text" id="name" placeholder="Enter your name" required>
+                <input type="text" id="name" name="full_name" placeholder="Enter your name" required>
             </div>
             <div class="form-group">
                 <label for="email">Email Address</label>
-                <input type="email" id="email" placeholder="Enter your email" required>
+                <input type="email" id="email" name="email" placeholder="Enter your email" required>
             </div>
             <div class="form-group">
                 <label for="phone">Phone Number</label>
-                <input type="tel" id="phone" placeholder="Enter your phone number" required>
+                <input type="tel" id="phone" name="phone" placeholder="Enter your phone number" required>
             </div>
             <div class="form-group">
                 <label for="destination">Choose Destination</label>
-                <select id="destination" required>
+                <select id="destination" name="destination" required>
                     <option value="">Choose a destination...</option>
-                    <option value="paris">Ajanta Caves</option>
-                    <option value="maldives">Ellora Caves</option>
-                    <option value="bali">Gateway of India</option>
-                    <option value="newyork">Tadoba</option>
-                    <option value="tokyo">Mahabaleshwar</option>
-                    <option value="tokyo">Matheran</option>
-                    <option value="tokyo">Seven Sisters Hills</option>
-                    <option value="tokyo">Bhandardara</option>
-                    <option value="tokyo">Khandala</option>
-                    <option value="tokyo">Amboli Waterfalls</option>
-                    <option value="tokyo">Muktai Waterfalls</option>
-                    <option value="tokyo">Zenith Waterfalls</option>
-                    <option value="tokyo">Rajgad Fort</option>
-                    <option value="tokyo">Torna Fort</option>
-                    <option value="tokyo">Sinhgad Fort</option>
-                    <option value="tokyo">Visapur Fort</option>
-                    <option value="tokyo">Purandar Fort</option>
-                    
+                    <option value="ajanta">Ajanta Caves</option>
+                    <option value="ellora">Ellora Caves</option>
+                    <option value="gateway">Gateway of India</option>
+                    <option value="tadoba">Tadoba</option>
+                    <option value="mahabaleshwar">Mahabaleshwar</option>
+                    <option value="matheran">Matheran</option>
+                    <option value="seven_sisters">Seven Sisters Hills</option>
+                    <option value="bhandardara">Bhandardara</option>
+                    <option value="khandala">Khandala</option>
+                    <option value="amboli">Amboli Waterfalls</option>
+                    <option value="muktai">Muktai Waterfalls</option>
+                    <option value="zenith">Zenith Waterfalls</option>
+                    <option value="rajgad">Rajgad Fort</option>
+                    <option value="torna">Torna Fort</option>
+                    <option value="sinhgad">Sinhgad Fort</option>
+                    <option value="visapur">Visapur Fort</option>
+                    <option value="purandar">Purandar Fort</option>
                 </select>
             </div>
             <button type="submit" class="book-btn">Book Now</button>
         </form>
     </div>
+    <script src="/JS/particles.js"></script>
+<script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script> 
 </body>
 </html>
