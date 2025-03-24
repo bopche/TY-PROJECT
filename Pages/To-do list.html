@@ -1,90 +1,90 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="../CSS/To-do list.css">
-<link rel="stylesheet" href="../CSS/Explore.css"/>
-
-<script src="../JS/"></script>
-<title>To-Go List</title>
-
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ODYSSEY</title>
+  <link rel="stylesheet" href="../CSS/To-do list.css">
 </head>
 <body>
- 
-<div id="myDIV" class="header">
-  <h2 style="margin:5px">ITINERARY</h2>
+  <!-- Navbar -->
+  <nav class="navbar">
+    <div class="logo">
+      <img src="../Images/Map_and_Plane_Logo-removebg-preview.png" alt="Tech Innovators Logo" />
+            <h2>ODYSSEY</h2>
+    </div>
+    <ul class="nav-links">
+      <li><a href="/index.html">Home</a></li>
+      <li><a href="/Pages/Explore.html">Explore</a></li>
+      <li><a href="/Pages/About.html">About</a></li>
+      <li><a href="/Pages/Contact.html">Contact</a></li>
+      <li><a href="/Pages/Login.html">Login</a></li>
+      <li><a href="/Pages/Review.html">Reviews</a></li>
+      <li><a href="/Pages/To-do list.html">To-Go List</a></li>
+      <li><a href="/Pages/likedplace.html">Liked Places</a></li>
 
-  <P><b>Make a list of places to visit at Maharashtra</b></P>
-  <input type="text" id="myInput" placeholder="Make a list of places you want to visit...">
-  <span onclick="newElement()" class="addBtn"><b>Add Place</b></span>
-</div>
+    </ul>
+  </nav>
 
-<ul id="myUL">
-  <li><b>Beaches</b></li>
-  <li><b>Caves</b></li>
-  <li><b>Forts</b></li>
-  <li><b>Hill-stations</b></li>
-  <li><b>Temples</b></li>
-  <li><b>Waterfalls</b></li>
-</ul>
+  <footer class="footer">
+    <div class="footer-waves"></div>
+
+    <div class="footer-content">
+        <!-- Quick Links Section -->
+        <div class="footer-section">
+            <h3>Quick Links</h3>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Destinations</a></li>
+                <li><a href="#">Travel Packages</a></li>
+                <li><a href="#">About Us</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </div>
+
+        <!-- Contact Information Section -->
+        <div class="footer-section">
+            <h3>Contact Us</h3>
+            <p>Wanderes Street, Avenue Park, Maharashtra.</p>
+            <p>Email :- www.odysseytravels@mh.com</p>
+            <p>Phone: +1 (555) 123-4567</p>
+        </div>
+
+        <!-- Social Media Section -->
+        <div class="footer-section">
+            <h3>Follow Us</h3>
+            <div class="social-icons">
+                <a href="#" class="social-icon">Facebook</a>
+                <a href="#" class="social-icon">Twitter</a>
+                <a href="#" class="social-icon">Instagram</a>
+                <a href="#" class="social-icon">YouTube</a>
+            </div>
+        </div>
+
+        <!-- Subscription Section -->
+        <div class="footer-subscribe">
+            <h3>Subscribe to Our Newsletter</h3>
+            <p>Get the latest travel deals and news right in your inbox!</p>
+            <input type="email" placeholder="Enter your email">
+            <button>Subscribe</button>
+        </div>
+    </div>
+
+    <!-- Footer Bottom Bar -->
+    <div class="footer-bottom">
+        <p>&copy; 2024 TravelWebsite. All rights reserved. Designed with passion for travel lovers.</p>
+    </div>
+</footer>
 
 
 <script>
-  // Create a "close" button and append it to each list item
-  var myNodelist = document.getElementsByTagName("LI");
-  var i;
-  for (i = 0; i < myNodelist.length; i++) {
-    var span = document.createElement("SPAN");
-    var txt = document.createTextNode("\u00D7");
-    span.className = "close";
-    span.appendChild(txt);
-    myNodelist[i].appendChild(span);
-  }
-  
-  // Click on a close button to hide the current list item
-  var close = document.getElementsByClassName("close");
-  var i;
-  for (i = 0; i < close.length; i++) {
-    close[i].onclick = function() {
-      var div = this.parentElement;
-      div.style.display = "none";
+    hamburger = document.querySelector(".hamburger");
+    hamburger.onclick = function () {
+        navBar = document.querySelector(".nav-bar");
+        navBar.classList.toggle("active");
     }
-  }
-  
-  // Add a "checked" symbol when clicking on a list item
-  var list = document.querySelector('ul');
-  list.addEventListener('click', function(ev) {
-    if (ev.target.tagName === 'LI') {
-      ev.target.classList.toggle('checked');
-    }
-  }, false);
-  
-  // Create a new list item when clicking on the "Add" button
-  function newElement() {
-    var li = document.createElement("li");
-    var inputValue = document.getElementById("myInput").value;
-    var t = document.createTextNode(inputValue);
-    li.appendChild(t);
-    if (inputValue === '') {
-      alert("You must write something!");
-    } else {
-      document.getElementById("myUL").appendChild(li);
-    }
-    document.getElementById("myInput").value = "";
-  
-    var span = document.createElement("SPAN");
-    var txt = document.createTextNode("\u00D7");
-    span.className = "close";
-    span.appendChild(txt);
-    li.appendChild(span);
+</script>
+<script src="../JS/Expore.js"></script> 
 
-    for (i = 0; i < close.length; i++) {
-      close[i].onclick = function() {
-        var div = this.parentElement;
-        div.style.display = "none";
-      }
-    }
-  }
-  </script>
 </body>
-</html>
+</html>  
